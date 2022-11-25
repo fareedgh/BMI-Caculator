@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 20px 100px;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .btn{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: solid gray 2px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #white{
+            background-color: white;
+        }
+        #aqua{
+            background-color: aquamarine;
+        }
+        #violet{
+            background-color: #ce9aff;
+        }
+        #black{
+            background-color: black;
+        }
+        #color-switcher{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="color-switcher">
+        <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+        <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
+        <span class="btn" id="violet" onclick="changeBG('#ce9aff')"></span>
+        <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+    </div>
+    <h1 class="text">About Us</h1>
+    <img src="https://media.istockphoto.com/photos/group-of-business-people-holding-placards-forming-about-us-picture-id492025669?k=20&m=492025669&s=612x612&w=0&h=1IvG8Fjr8IqjC4PD0hnicqPi7NUn1QHiEJudjcw-DoQ=" alt="">
+    <p class="text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi consequuntur odio totam nesciunt? Placeat obcaecati eius suscipit aliquam alias nesciunt quas quibusdam doloribus dolor dolorum! Exercitationem vitae doloremque fuga maxime voluptate, voluptatum iusto perferendis minima recusandae ipsam modi facere libero? Autem, modi. Rerum aut ad fugiat sequi molestias incidunt sunt repellendus asperiores alias et placeat voluptatibus impedit dolorem tenetur at, eligendi error aspernatur explicabo. Numquam maxime pariatur, dignissimos molestias harum aut voluptatum deleniti ad nihil amet veritatis beatae nam repellendus facere? Obcaecati, exercitationem, praesentium hic illo ad est nostrum repellat aliquam eum tenetur enim ducimus cupiditate facere dolorum ipsam suscipit rerum veritatis, nihil distinctio dolore sapiente eveniet mollitia repellendus amet! Delectus consequatur voluptatibus animi repellat est quos, repellendus eius iste! Incidunt ad sint, consectetur maxime blanditiis modi? Blanditiis soluta similique porro temporibus. Velit eos dolores ex, corrupti sed illum! Dolores quae sint eaque odit, consequatur eos aliquid, dolorem ex qui assumenda dignissimos autem tenetur. Atque, eaque sunt vero quidem debitis saepe rem temporibus soluta! Dicta recusandae enim libero, quo obcaecati minus aperiam earum? Perspiciatis adipisci repudiandae neque esse omnis odio quis suscipit numquam. Consequuntur corrupti provident ipsum quibusdam, doloribus, necessitatibus porro aliquid itaque delectus accusamus nihil voluptas ex ipsam molestias sapiente recusandae aspernatur dolores harum! Neque aliquam suscipit consequatur unde eligendi! Repellendus nemo fuga esse animi suscipit necessitatibus, doloribus veniam maxime ea debitis sit impedit nulla quae voluptate? Temporibus possimus recusandae qui, accusantium aliquam, eligendi expedita officiis, a repudiandae amet minus nemo suscipit aperiam ducimus provident ipsum. Eveniet quibusdam laudantium recusandae aliquam beatae doloribus facilis deleniti optio, odit fugit. Eos dolorem cum quasi enim, magnam doloremque ipsa voluptatibus rerum necessitatibus consequatur assumenda laborum, praesentium ratione nulla dicta, voluptate tempora officiis? Consequatur ullam itaque porro corrupti consectetur ipsam. Necessitatibus deleniti ut officiis, voluptatum cupiditate veniam quisquam reiciendis quod distinctio deserunt exercitationem quo libero porro sint tempore? Ipsum, dolorum? Doloribus quae ullam excepturi quisquam assumenda numquam mollitia provident quas facilis hic officia vero eveniet iusto et sunt sapiente blanditiis aspernatur, asperiores similique dolorem? Corrupti asperiores obcaecati quae, modi mollitia debitis molestiae eos cupiditate vitae ad maiores in nemo magni tenetur pariatur quod voluptatibus non aspernatur cum! Minima, optio ipsam ab corporis adipisci aspernatur aut quaerat eum velit accusamus quis iure debitis magnam eius, voluptatibus corrupti ad ducimus labore voluptatum. A explicabo neque, est necessitatibus impedit iure, ea ipsa labore exercitationem, incidunt maxime pariatur aliquid. Repudiandae, doloremque sunt magni maiores in quisquam perspiciatis placeat incidunt cum quidem deleniti laboriosam voluptas ratione expedita aliquam fugiat repellat totam est cumque! Fugiat hic distinctio quasi provident nostrum sint aspernatur facere itaque quis alias, possimus minus similique corporis sapiente asperiores necessitatibus deleniti aperiam laudantium temporibus architecto cum reprehenderit quisquam dolore! Animi ipsa praesentium similique nam, dolores id, sint culpa dolorem vel suscipit molestiae mollitia consequatur explicabo neque. Voluptatum quis recusandae unde ipsam, beatae, nisi amet ex saepe, nobis voluptatem quisquam fugiat voluptas vel deleniti in necessitatibus ad inventore! Amet temporibus veniam reprehenderit illo qui? Nihil adipisci tenetur, incidunt maiores fugiat reiciendis molestiae, atque quibusdam, facere dignissimos in.
+    </p>
+
+    <script>
+        // let forWhite = document.getElementById('white');
+        // forWhite.addEventListener('click',funWhite);
+
+        function changeBG(color){
+            document.body.style.backgroundColor = color;
+            let txt = document.getElementsByClassName("text");
+            if(color == "#000000"){
+                for(let elm of txt){
+                    elm.style.color = "white";
+                }
+                }else{
+                    for(let elm of txt){
+                    elm.style.color = "black";
+                }
+            }
+        }
+    
+    </script>
+</body>
+</html>

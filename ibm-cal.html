@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-family: sans-serif;
+            height: 100vh;
+            color: white;
+            color: sky;
+        }
+        div{
+            width: 500px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 5px;
+            box-shadow: 2px 2px 2px #919191;
+            background-color: rgba(78, 75, 75, 0.5);
+        }
+        h2{
+            font-size: 30px;
+            font-weight: 600;
+            color: white;
+            background-color: purple;
+        }
+        /* .text{
+            color: white;
+        } */
+        #btn{
+            padding: 10px;
+            width: 150px;
+            border-radius: 5px;
+            color: white;
+            background-color: #282626;
+            border: none;
+        }
+        #btn:hover{
+             background-color: purple;
+        }
+
+        
+    </style>
+</head>
+<body>
+<div>
+    <h2>BMI <br> Calculator</h2>
+    <p class="text">Height (cm)</p>
+    <input type="text" id="height">
+    <p class="text">Weight (kg)</p>
+    <input type="text" name="" id="weight">
+    <p id="result"></p>
+    <button id="btn" onclick="bmi()">Calculate</button>
+</div>
+
+<script>
+    function bmi(){
+        var h = document.getElementById('height').value;
+        var w = document.getElementById('weight').value;
+
+        var bmi = w / ((h / 100) * (h / 100));
+        var total = bmi.toFixed(3);
+        
+    
+        var element = document.getElementById('result')
+        element.innerHTML = "Your BMI is " + total;
+
+        if(total < 18.5){
+            element.style.background = "#808080";
+        }
+        // else if(total > 18.5 && total <= 24.9){
+        //     element.style.background = "#87CEEB";
+        // }else if(total >24.9 && total =<29.9 ){
+        //     element.style.background = "#00FF00";
+        // }else if(total >29.9 && total <=39.9){
+        //     element.style.background = "#FFFF00";
+        // }else{
+        //     element.style.background = "#FF0000";
+        // } 
+
+        
+    }
+</script>
+
+</body>
+</html>
